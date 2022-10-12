@@ -1,0 +1,16 @@
+.hero {
+  padding-top: 108px;
+  width: 100%;
+
+  &__title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  &__slideshow {
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+    background-color: $darkgray;
+  }
+}
