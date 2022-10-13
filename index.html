@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/6c20dffe37.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- scss -->
     <link rel="stylesheet" href="./scss/ style.css" />
   </head>
   <body>
@@ -35,86 +42,110 @@
             class="search__input"
             placeholder="サークル・団体名/活動内容など"
           />
+          <div class="search__icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
         </div>
-        <div class="dropdown__container">
-          <div class="dropdown__genre dropdown">
-            <h3>ジャンルから探す</h3>
-            <div class="dropdown__btn">btn</div>
-            <div class="dropdown__menu">
-              <ul class="dropdown__items">
-                <li class="dropdown_item">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </li>
-                <li class="dropdown_item">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </li>
-                <li class="dropdown_item">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </li>
-                <li class="dropdown_item">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </li>
-                <li class="dropdown_item">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </li>
-                <li class="dropdown_item">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </li>
-              </ul>
+        <div class="dropdown">
+          <div class="dropdown__container">
+            <div class="dropdown__headline">
+              <h3>ジャンルから探す</h3>
+            </div>
+            <div class="dropdown__icon" id="genre-btn">
+              <i class="fa-solid fa-caret-down"></i>
             </div>
           </div>
-          <div class="dropdown__campus dropdown">
-            <h3>キャンパスから探す</h3>
-            <div class="dropdown__btn">btn</div>
-            <div class="dropdown__menu">
-              <ul class="dropdown__items">
-                <li class="dropdown_item">
+          <div class="dropdown__menu" id="genre-menu">
+            <ul class="dropdown__items">
+              <li class="dropdown__item">
+                <div class="dropdown__item__container">
                   <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </li>
-                <li class="dropdown_item">
+                </div>
+              </li>
+              <li class="dropdown__item">
+                <div class="dropdown__item__container">
                   <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </li>
-                <li class="dropdown_item">
+                </div>
+              </li>
+              <li class="dropdown__item">
+                <div class="dropdown__item__container">
                   <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </li>
-                <li class="dropdown_item">
+                </div>
+              </li>
+              <li class="dropdown__item">
+                <div class="dropdown__item__container">
                   <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </li>
-                <li class="dropdown_item">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </li>
-                <li class="dropdown_item">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </li>
-              </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown__container">
+            <div class="dropdown__headline">
+              <h3>キャンパスから探す</h3>
+            </div>
+            <div class="dropdown__icon" id="campus-btn">
+              <i class="fa-solid fa-caret-down"></i>
             </div>
           </div>
-          <div class="dropdown__obsession dropdown">
-            <h3>こだわりから探す</h3>
-            <div class="dropdown__btn">btn</div>
-            <div class="dropdown__menu">
-              <ul class="dropdown__items">
-                <li class="dropdown_item">
+          <div class="dropdown__menu" id="campus-menu">
+            <ul class="dropdown__items">
+              <li class="dropdown__item">
+                <div class="dropdown__item__container">
                   <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </li>
-                <li class="dropdown_item">
+                </div>
+              </li>
+              <li class="dropdown__item">
+                <div class="dropdown__item__container">
                   <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </li>
-                <li class="dropdown_item">
+                </div>
+              </li>
+              <li class="dropdown__item">
+                <div class="dropdown__item__container">
                   <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </li>
-                <li class="dropdown_item">
+                </div>
+              </li>
+              <li class="dropdown__item">
+                <div class="dropdown__item__container">
                   <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </li>
-                <li class="dropdown_item">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </li>
-                <li class="dropdown_item">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </li>
-              </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown__container">
+            <div class="dropdown__headline">
+              <h3>こだわりから探す</h3>
+            </div>
+            <div class="dropdown__icon" id="obsession-btn">
+              <i class="fa-solid fa-caret-down"></i>
             </div>
           </div>
+          <div class="dropdown__menu" id="obsession-menu">
+            <ul class="dropdown__items">
+              <li class="dropdown__item">
+                <div class="dropdown__item__container">
+                  <input type="checkbox" class="dropdown__checkbox" />ダミー
+                </div>
+              </li>
+              <li class="dropdown__item">
+                <div class="dropdown__item__container">
+                  <input type="checkbox" class="dropdown__checkbox" />ダミー
+                </div>
+              </li>
+              <li class="dropdown__item">
+                <div class="dropdown__item__container">
+                  <input type="checkbox" class="dropdown__checkbox" />ダミー
+                </div>
+              </li>
+              <li class="dropdown__item">
+                <div class="dropdown__item__container">
+                  <input type="checkbox" class="dropdown__checkbox" />ダミー
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="search__btn__container">
+          <button class="search__btn">検索する</button>
         </div>
       </section>
 
