@@ -1,0 +1,36 @@
+@import "../global/variables";
+@import "../global/mixin";
+
+.header {
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid $gray;
+  font-size: 1rem;
+  background-color: $white;
+
+  &__inner {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__items {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__item {
+    font-weight: bold;
+
+    & a {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+}
