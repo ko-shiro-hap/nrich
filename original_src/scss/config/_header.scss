@@ -7,6 +7,7 @@
   border-bottom: 1px solid $gray;
   font-size: 1rem;
   background-color: $white;
+  z-index: 1;
 
   &__inner {
     display: flex;
