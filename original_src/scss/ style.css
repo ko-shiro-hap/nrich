@@ -1,0 +1,423 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav,
+ul li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.5rem;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px 0;
+  max-width: 960px;
+  width: 100%;
+}
+.container__title {
+  padding: 20px 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.btn {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #03dc03;
+}
+.btn__register {
+  color: #03dc03;
+  background-color: #fff;
+}
+.btn__login {
+  color: #fff;
+  background-color: #03dc03;
+}
+
+.section__title {
+  position: relative;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.section__title::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 50%;
+  left: calc(50% - 100px);
+  width: 28px;
+  height: 2px;
+  background-color: #03dc03;
+}
+.section__title::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 50%;
+  right: calc(50% - 100px);
+  width: 28px;
+  height: 2px;
+  background-color: #03dc03;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid #cbcbcb;
+  font-size: 1rem;
+  background-color: #fff;
+  z-index: 1;
+}
+.header__inner {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+.header__nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.header__items {
+  display: flex;
+  gap: 20px;
+}
+.header__item {
+  font-weight: bold;
+}
+.header__item a {
+  color: #333;
+  text-decoration: none;
+}
+
+.hero {
+  padding-top: 108px;
+  width: 100%;
+}
+.hero__title {
+  font-size: 1.6rem;
+  text-align: center;
+}
+.hero__slideshow {
+  margin-top: 20px;
+  width: 100%;
+  height: 300px;
+  background-color: #a3a3a3;
+}
+
+.search {
+  padding: 10px 0;
+  background-color: #f1f1f1;
+}
+.search__input__container {
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  border-bottom: 1px solid #cbcbcb;
+}
+.search__input {
+  width: calc(100% - 65px);
+  height: 36px;
+  border: 1px solid #cbcbcb;
+  border-radius: 4px;
+}
+.search__icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: #03dc03;
+  justify-content: center;
+  align-items: center;
+}
+.search__icon i {
+  font-size: 20px;
+  color: #fff;
+}
+.search__btn {
+  padding: 10px 120px;
+  font-size: 1.2rem;
+  color: #03dc03;
+  background-color: #fff;
+  border: 2px solid #03dc03;
+  border-radius: 8px;
+}
+.search__btn__container {
+  padding-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.dropdown {
+  padding: 10px;
+}
+.dropdown__container {
+  display: flex;
+  border-bottom: 1px solid #cbcbcb;
+  background-color: #fff;
+}
+.dropdown__headline {
+  display: flex;
+  width: calc(100% - 40px);
+  height: 40px;
+  border-radius: 4px;
+}
+.dropdown__headline h3 {
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 38px;
+  transform: translateX(20px);
+}
+.dropdown__icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: #03dc03;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown__icon i {
+  font-size: 20px;
+  color: #fff;
+}
+.dropdown__menu {
+  padding: 10px;
+  background-color: #fff;
+}
+.dropdown__items {
+  display: flex;
+  gap: 8px;
+}
+.dropdown__item {
+  padding: 1px;
+  border: 1px solid #cbcbcb;
+  border-radius: 16px;
+}
+.dropdown__item__container {
+  padding: 4px;
+  color: #fff;
+  background-color: #a3a3a3;
+  border-radius: 16px;
+}
+
+.circle {
+  padding: 20px 0;
+}
+.circle__items {
+  padding: 20px 0;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.circle__item {
+  position: relative;
+  padding: 10px;
+  max-width: 440px;
+  border: 2px solid #f1f1f1;
+  border-top: none;
+  border-radius: 8px;
+  color: #333;
+  transition: all 0.5s;
+}
+.circle__item:hover {
+  background-color: rgba(3, 220, 3, 0.1);
+  border-color: #03dc03;
+}
+.circle__item img {
+  width: 100%;
+  border-radius: 8px;
+}
+.circle__name {
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+.circle__btn {
+  padding: 10px 120px;
+  font-size: 1.2rem;
+  color: #03dc03;
+  background-color: #fff;
+  border: 2px solid #03dc03;
+  border-radius: 8px;
+}
+.circle__btn__container {
+  padding-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.footer {
+  margin-top: 20px;
+  padding: 20px;
+  border-top: 4px solid rgba(3, 220, 3, 0.5);
+  text-align: center;
+}/*# sourceMappingURL= style.css.map */

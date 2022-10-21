@@ -236,6 +236,7 @@ body {
   border-bottom: 1px solid #cbcbcb;
   font-size: 1rem;
   background-color: #fff;
+  z-index: 1;
 }
 .header__inner {
   display: flex;
@@ -375,13 +376,12 @@ body {
   padding: 20px 0;
   display: flex;
   gap: 10px;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .circle__item {
   position: relative;
   padding: 10px;
-  max-width: 440px;
   border: 2px solid #f1f1f1;
   border-top: none;
   border-radius: 8px;
@@ -419,4 +419,4 @@ body {
   padding: 20px;
   border-top: 4px solid rgba(3, 220, 3, 0.5);
   text-align: center;
-}/*# sourceMappingURL= style.css.map */
+}/*# sourceMappingURL=app.css.map */
