@@ -24,8 +24,14 @@
                     <li class="header__item"><a href="#">サークル</a></li>
                     <li class="header__item"><a href="#">Nrichについて</a></li>
                 </ul>
-                <button class="btn btn__register">登録(無料)</button>
-                <button class="btn btn__login">ログイン</button>
+                @guest
+                    <a href="/register"><button class="btn btn__register">登録(無料)</button></a>
+                    <a href="/login"><button class="btn btn__login">ログイン</button></a>
+                @endguest
+                @auth
+                    <a href="/register"><button class="btn btn__register">名前が入る</button></a>
+                    <a href="/login"><button class="btn btn__login">ログアウト</button></a>
+                @endauth
             </nav>
         </div>
     </header>
