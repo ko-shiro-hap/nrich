@@ -1,0 +1,64 @@
+@import "../global/variables";
+@import "../global/mixin";
+
+body {
+    font-size: 14px;
+    line-height: 1.5rem;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 960px;
+    width: 100%;
+
+    &__title {
+        padding: 20px 0;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
+.btn {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid $green;
+
+    &__register {
+        color: $green;
+        background-color: $white;
+    }
+
+    &__login {
+        color: $white;
+        background-color: $green;
+    }
+}
+
+.section__title {
+    position: relative;
+    font-size: 1.2rem;
+    text-align: center;
+
+    &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 50%;
+        left: calc(50% - 100px);
+        width: 28px;
+        height: 2px;
+        background-color: $green;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 50%;
+        right: calc(50% - 100px);
+        width: 28px;
+        height: 2px;
+        background-color: $green;
+    }
+}
