@@ -29,7 +29,7 @@
                     <a href="/login"><button class="btn btn__login">ログイン</button></a>
                 @endguest
                 @auth
-                    <a href="/register"><button class="btn btn__register">名前が入る</button></a>
+                    <a href="/register"><button class="btn btn__register">{{ $user->name }}</button></a>
                     <a href="/login"><button class="btn btn__login">ログアウト</button></a>
                 @endauth
             </nav>
