@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 // 追記
 use Auth;
-use Circle;
+use App\Models\Circle;
+use App\Models\CircleImage;
 
 class CircleController extends Controller
 {
@@ -19,8 +20,9 @@ class CircleController extends Controller
     {
         $user = Auth::user();
 
+        $circles = Circle::with(['circleImages'])->get();
 
-        return view('circle.index', ['user'=>$user]);
+        return view('circle.index', ['user'=>$user, 'circles'=>$circles]);
     }
 
     /**

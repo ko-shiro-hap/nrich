@@ -18,7 +18,9 @@ class CircleAtmosphere extends Model
         'dinner_meeting',
     ];
 
-
+    public function circles() {
+        return $this->belongsTo('App\Models\Circle');
+    }
 
     use HasFactory;
 }

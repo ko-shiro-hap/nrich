@@ -18,8 +18,11 @@ class CircleImage extends Model
         'img3',
         'img4',
         'img5',
-    ]
+    ];
 
+    public function circles() {
+        return $this->belongsTo('App\Models\Circle');
+    }
 
     use HasFactory;
 }

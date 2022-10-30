@@ -137,105 +137,40 @@
     <section class="circle container">
         <h2 class="section__title">ピックアップ</h2>
         <ul class="circle__items">
-            <a href="#">
-                <li class="circle__item">
-                    <img src="{{ asset('images/sample.jpeg') }}" alt="" />
-                    <h3 class="circle__name">ダミーサークル</h3>
-                    <p class="circle__description">
-                        ダミーテキストダミーテキストダミーテキスト
-                    </p>
-                </li>
-            </a>
-            <a href="#">
-                <li class="circle__item">
-                    <img src="{{ asset('images/sample.jpeg') }}" alt="" />
-                    <h3 class="circle__name">ダミーサークル</h3>
-                    <p class="circle__description">
-                        ダミーテキストダミーテキストダミーテキスト
-                    </p>
-                </li>
-            </a>
-            <a href="#">
-                <li class="circle__item">
-                    <img src="{{ asset('images/sample.jpeg') }}" alt="" />
-                    <h3 class="circle__name">ダミーサークル</h3>
-                    <p class="circle__description">
-                        ダミーテキストダミーテキストダミーテキスト
-                    </p>
-                </li>
-            </a>
-            <a href="#">
-                <li class="circle__item">
-                    <img src="{{ asset('images/sample.jpeg') }}" alt="" />
-                    <h3 class="circle__name">ダミーサークル</h3>
-                    <p class="circle__description">
-                        ダミーテキストダミーテキストダミーテキスト
-                    </p>
-                </li>
-            </a>
-            <a href="#">
-                <li class="circle__item">
-                    <img src="{{ asset('images/sample.jpeg') }}" alt="" />
-                    <h3 class="circle__name">ダミーサークル</h3>
-                    <p class="circle__description">
-                        ダミーテキストダミーテキストダミーテキスト
-                    </p>
-                </li>
-            </a>
-            <a href="#">
-                <li class="circle__item">
-                    <img src="{{ asset('images/sample.jpeg') }}" alt="" />
-                    <h3 class="circle__name">ダミーサークル</h3>
-                    <p class="circle__description">
-                        ダミーテキストダミーテキストダミーテキスト
-                    </p>
-                </li>
-            </a>
+            @foreach ($circles as $circle)
+                <a href="#">
+                    <li class="circle__item">
+                        @foreach ($circle->circleImages as $image)
+                            <img src="{{ asset('images/circle/' . $image->hero_img) }}" alt="" />
+                        @endforeach
+                        <h3 class="circle__name">{{ $circle->name }}</h3>
+                        <p class="circle__description">
+                            circleDetailsのcatch_copyが入ります
+                        </p>
+                    </li>
+                </a>
+            @endforeach
         </ul>
     </section>
 
     <section class="new-arrival container">
         <h2 class="section__title">新着サークル</h2>
         <ul class="circle__items">
-            <a href="#">
-                <li class="circle__item">
-                    <img src="{{ asset('images/sample.jpeg') }}" alt="" />
-                    <h3 class="circle__name">ダミーサークル</h3>
-                    <p class="circle__description">
-                        ダミーテキストダミーテキストダミーテキスト
-                    </p>
-                </li>
-            </a>
-            <a href="#">
-                <li class="circle__item">
-                    <img src="{{ asset('images/sample.jpeg') }}" alt="" />
-                    <h3 class="circle__name">ダミーサークル</h3>
-                    <p class="circle__description">
-                        ダミーテキストダミーテキストダミーテキスト
-                    </p>
-                </li>
-            </a>
-            <a href="#">
-                <li class="circle__item">
-                    <img src="{{ asset('images/sample.jpeg') }}" alt="" />
-                    <h3 class="circle__name">ダミーサークル</h3>
-                    <p class="circle__description">
-                        ダミーテキストダミーテキストダミーテキスト
-                    </p>
-                </li>
-            </a>
-            <a href="#">
-                <li class="circle__item">
-                    <img src="{{ asset('images/sample.jpeg') }}" alt="" />
-                    <h3 class="circle__name">ダミーサークル</h3>
-                    <p class="circle__description">
-                        ダミーテキストダミーテキストダミーテキスト
-                    </p>
-                </li>
-            </a>
+            @foreach ($circles as $circle)
+                <a href="#">
+                    <li class="circle__item">
+                        @foreach ($circle->circleImages as $image)
+                            <img src="{{ asset('images/circle/' . $image->hero_img) }}" alt="" />
+                        @endforeach
+                        <h3 class="circle__name">{{ $circle->name }}</h3>
+                        <p class="circle__description">
+                            circleDetailsのcatch_copyが入ります
+                        </p>
+                    </li>
+                </a>
+            @endforeach
         </ul>
         <div class="circle__btn__container">
             <button class="circle__btn">一覧を見る</button>
         </div>
     </section>
-@endsection

@@ -11,6 +11,7 @@ class CircleDetails extends Model
 
     protected $fillable =
     [
+        'catch_copy',
         'summary',
         'number_of_men',
         'number_of_women',
@@ -19,6 +20,9 @@ class CircleDetails extends Model
         'number_of_camps',
     ];
 
+    public function circles() {
+        return $this->belongsTo('App\Models\Circle');
+    }
 
 
 

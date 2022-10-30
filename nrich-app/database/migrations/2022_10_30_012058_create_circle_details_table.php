@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('circle_details', function (Blueprint $table) {
             $table->id();
             $table->integer('circle_id');
+            $table->string('catch_copy'); //キャッチコピー
             $table->text('summary'); //概要
             $table->integer('number_of_men'); //男子メンバー人数
             $table->integer('number_of_women'); //女子メンバー人数
