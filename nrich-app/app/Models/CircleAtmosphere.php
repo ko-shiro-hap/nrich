@@ -16,7 +16,7 @@ class CircleAtmosphere extends Model
         'more_position',
         'intimacy',
         'dinner_meeting',
-    ]
+    ];
 
 
 

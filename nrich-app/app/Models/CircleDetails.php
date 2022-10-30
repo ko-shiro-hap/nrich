@@ -17,7 +17,7 @@ class CircleDetails extends Model
         'location',
         'activity_frequency',
         'number_of_camps',
-    ]
+    ];
 
 
 

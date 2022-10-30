@@ -5,15 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Circle extends Model
+class CircleImage extends Model
 {
-    protected $table = 'circles';
+    protected $table = 'circle_images';
 
     protected $fillable =
     [
-        'name',
-    ];
-
+        'hero_img',
+        'img1',
+        'img2',
+        'img3',
+        'img4',
+        'img5',
+    ]
 
 
     use HasFactory;

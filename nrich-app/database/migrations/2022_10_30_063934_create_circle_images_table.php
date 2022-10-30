@@ -13,14 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('circle_atmospheres', function (Blueprint $table) {
+        Schema::create('circle_images', function (Blueprint $table) {
             $table->id();
             $table->integer('circle_id');
-            $table->integer('seriousness'); //真剣さ
-            $table->integer('hyponymy'); //上下関係
-            $table->integer('more_position');//兼サーのしやすさ
-            $table->integer('intimacy');//仲の良さ
-            $table->integer('dinner_meeting');//食事会の頻度
+            $table->string('hero_img'); //ヒーロー画像
+            $table->string('img1'); //画像1
+            $table->string('img2'); //画像2
+            $table->string('img3'); //画像3
+            $table->string('img4'); //画像4
+            $table->string('img5'); //画像5
             $table->timestamps();
         });
     }
@@ -32,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('circle_atmospheres');
+        Schema::dropIfExists('circle_images');
     }
 };
