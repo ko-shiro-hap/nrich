@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\CircleController@index');
+Route::resource('/', App\Http\Controllers\CircleController::class);
 
 Route::resource('admin', App\Http\Controllers\AdminController::class);
 
