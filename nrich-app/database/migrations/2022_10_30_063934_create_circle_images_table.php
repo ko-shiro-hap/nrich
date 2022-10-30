@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('hero_img'); //ヒーロー画像
             $table->string('img1'); //画像1
             $table->string('img2'); //画像2
-            $table->string('img3'); //画像3
-            $table->string('img4'); //画像4
-            $table->string('img5'); //画像5
+            $table->string('img3')->nullable(true); //画像3
+            $table->string('img4')->nullable(true); //画像4
+            $table->string('img5')->nullable(true); //画像5
             $table->timestamps();
         });
     }
