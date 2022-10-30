@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
+// 追記
 use Auth;
+use Circle;
 
 class CircleController extends Controller
 {
@@ -15,6 +18,7 @@ class CircleController extends Controller
     public function index()
     {
         $user = Auth::user();
+
 
         return view('circle.index', ['user'=>$user]);
     }

@@ -11,6 +11,7 @@ class CircleImage extends Model
 
     protected $fillable =
     [
+        'circle_id',
         'hero_img',
         'img1',
         'img2',
