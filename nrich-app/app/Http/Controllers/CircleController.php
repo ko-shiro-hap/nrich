@@ -54,7 +54,12 @@ class CircleController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = Auth::user();
+
+        $circle = Circle::find($id);
+        $images = CircleImage::where('circle_id', '=', $id)->first();
+
+        return view('circle.about', ['user'=>$user, 'circle'=>$circle, 'images'=>$images]);
     }
 
     /**
@@ -65,7 +70,7 @@ class CircleController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**

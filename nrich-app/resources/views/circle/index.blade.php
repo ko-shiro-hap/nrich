@@ -4,7 +4,7 @@
     <nav class="header__nav">
         <ul class="header__items">
             <li class="header__item"><a href="#">履修情報</a></li>
-            <li class="header__item"><a href="#">サークル</a></li>
+            <li class="header__item"><a href="{{ route('circle.index') }}">サークル</a></li>
             <li class="header__item"><a href="#">Nrichについて</a></li>
         </ul>
         @guest
@@ -135,13 +135,13 @@
     </section>
 
     <section class="circle container">
-        <h2 class="section__title">ピックアップ</h2>
+        <h2 class="title">ピックアップ</h2>
         <ul class="circle__items">
             @foreach ($circles as $circle)
-                <a href="#">
+                <a href="{{ route('circle.show', $circle->id) }}">
                     <li class="circle__item">
                         @foreach ($circle->circleImages as $image)
-                            <img src="{{ asset('images/circle/' . $image->hero_img) }}" alt="" />
+                            <img src="{{ asset('images/circle/' . $image->hero_img) }}" alt="メイン画像" />
                         @endforeach
                         <h3 class="circle__name">{{ $circle->name }}</h3>
                         <p class="circle__description">
@@ -154,7 +154,7 @@
     </section>
 
     <section class="new-arrival container">
-        <h2 class="section__title">新着サークル</h2>
+        <h2 class="title">新着サークル</h2>
         <ul class="circle__items">
             @foreach ($circles as $circle)
                 <a href="#">
@@ -174,3 +174,4 @@
             <button class="circle__btn">一覧を見る</button>
         </div>
     </section>
+@endsection

@@ -23,6 +23,7 @@
 
         </div>
     </header>
+
     <main class="main">
         @yield('content')
     </main>
