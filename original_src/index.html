@@ -15,248 +15,134 @@
     <link rel="stylesheet" href="./scss/ style.css" />
   </head>
   <body>
+    <!-- ヘッダー開始 -->
     <header class="header">
-      <div class="header__inner">
-        <img src="./images/logo.svg" alt="" />
-        <nav class="header__nav">
-          <ul class="header__items">
-            <li class="header__item"><a href="#">履修情報</a></li>
-            <li class="header__item"><a href="#">サークル</a></li>
-            <li class="header__item"><a href="#">Nrichについて</a></li>
-          </ul>
-          <button class="btn btn__register">登録(無料)</button>
-          <button class="btn btn__login">ログイン</button>
-        </nav>
-      </div>
+      <h1>U's Pass</h1>
+      <nav class="header__nav">
+        <a href="#">登録する</a>
+        <a href="#">ログイン</a>
+      </nav>
     </header>
+
     <main>
+      <!-- ヒーロー開始 -->
       <section class="hero">
-        <h1 class="hero__title">サークル</h1>
-        <div class="hero__slideshow"></div>
-      </section>
-
-      <section class="search container">
-        <div class="search__input__container">
-          <input
-            type="text"
-            class="search__input"
-            placeholder="サークル・団体名/活動内容など"
-          />
-          <div class="search__icon">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
+        <div class="search">
+          <h2>最高のサークルを探す</h2>
+          <input type="text" class="search__input" placeholder="カテゴリ" />
+          <input type="text" class="search__input" placeholder="ジャンル" />
+          <input type="text" class="search__input" placeholder="特徴" />
+          <button class="search__button">検索する</button>
         </div>
-        <div class="dropdown">
-          <div class="dropdown__container">
-            <div class="dropdown__headline">
-              <h3>ジャンルから探す</h3>
-            </div>
-            <div class="dropdown__icon" id="genre-btn">
-              <i class="fa-solid fa-caret-down"></i>
-            </div>
-          </div>
-          <div class="dropdown__menu" id="genre-menu">
-            <ul class="dropdown__items">
-              <li class="dropdown__item">
-                <div class="dropdown__item__container">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </div>
-              </li>
-              <li class="dropdown__item">
-                <div class="dropdown__item__container">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </div>
-              </li>
-              <li class="dropdown__item">
-                <div class="dropdown__item__container">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </div>
-              </li>
-              <li class="dropdown__item">
-                <div class="dropdown__item__container">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="dropdown__container">
-            <div class="dropdown__headline">
-              <h3>キャンパスから探す</h3>
-            </div>
-            <div class="dropdown__icon" id="campus-btn">
-              <i class="fa-solid fa-caret-down"></i>
-            </div>
-          </div>
-          <div class="dropdown__menu" id="campus-menu">
-            <ul class="dropdown__items">
-              <li class="dropdown__item">
-                <div class="dropdown__item__container">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </div>
-              </li>
-              <li class="dropdown__item">
-                <div class="dropdown__item__container">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </div>
-              </li>
-              <li class="dropdown__item">
-                <div class="dropdown__item__container">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </div>
-              </li>
-              <li class="dropdown__item">
-                <div class="dropdown__item__container">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="dropdown__container">
-            <div class="dropdown__headline">
-              <h3>こだわりから探す</h3>
-            </div>
-            <div class="dropdown__icon" id="obsession-btn">
-              <i class="fa-solid fa-caret-down"></i>
-            </div>
-          </div>
-          <div class="dropdown__menu" id="obsession-menu">
-            <ul class="dropdown__items">
-              <li class="dropdown__item">
-                <div class="dropdown__item__container">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </div>
-              </li>
-              <li class="dropdown__item">
-                <div class="dropdown__item__container">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </div>
-              </li>
-              <li class="dropdown__item">
-                <div class="dropdown__item__container">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </div>
-              </li>
-              <li class="dropdown__item">
-                <div class="dropdown__item__container">
-                  <input type="checkbox" class="dropdown__checkbox" />ダミー
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="search__btn__container">
-          <button class="search__btn">検索する</button>
+        <div class="hero__image">
+          <img src="./images/hero.jpg" alt="" />
         </div>
       </section>
 
-      <section class="circle container">
-        <h2 class="section__title">ピックアップ</h2>
+      <!-- サークル表示開始 -->
+      <section class="new-arrival">
+        <div class="section__title__container">
+          <h2 class="section-title">LATEST</h2>
+          <p>新着サークル</p>
+        </div>
+
         <ul class="circle__items">
           <a href="#">
             <li class="circle__item">
-              <img src="images/sample.jpeg" alt="" />
-              <h3 class="circle__name">ダミーサークル</h3>
-              <p class="circle__description">
-                ダミーテキストダミーテキストダミーテキスト
-              </p>
+              <img src="" alt="" />
+              <h3>競プロサークル</h3>
+              <p>アットコーダーを頑張るコミュニティです！ 初心者大歓迎！</p>
             </li>
           </a>
           <a href="#">
             <li class="circle__item">
-              <img src="images/sample.jpeg" alt="" />
-              <h3 class="circle__name">ダミーサークル</h3>
-              <p class="circle__description">
-                ダミーテキストダミーテキストダミーテキスト
-              </p>
+              <img src="" alt="" />
+              <h3>競プロサークル</h3>
+              <p>アットコーダーを頑張るコミュニティです！ 初心者大歓迎！</p>
             </li>
           </a>
           <a href="#">
             <li class="circle__item">
-              <img src="images/sample.jpeg" alt="" />
-              <h3 class="circle__name">ダミーサークル</h3>
-              <p class="circle__description">
-                ダミーテキストダミーテキストダミーテキスト
-              </p>
+              <img src="" alt="" />
+              <h3>競プロサークル</h3>
+              <p>アットコーダーを頑張るコミュニティです！ 初心者大歓迎！</p>
             </li>
           </a>
           <a href="#">
             <li class="circle__item">
-              <img src="images/sample.jpeg" alt="" />
-              <h3 class="circle__name">ダミーサークル</h3>
-              <p class="circle__description">
-                ダミーテキストダミーテキストダミーテキスト
-              </p>
+              <img src="" alt="" />
+              <h3>競プロサークル</h3>
+              <p>アットコーダーを頑張るコミュニティです！ 初心者大歓迎！</p>
             </li>
           </a>
           <a href="#">
             <li class="circle__item">
-              <img src="images/sample.jpeg" alt="" />
-              <h3 class="circle__name">ダミーサークル</h3>
-              <p class="circle__description">
-                ダミーテキストダミーテキストダミーテキスト
-              </p>
+              <img src="" alt="" />
+              <h3>競プロサークル</h3>
+              <p>アットコーダーを頑張るコミュニティです！ 初心者大歓迎！</p>
             </li>
           </a>
           <a href="#">
             <li class="circle__item">
-              <img src="images/sample.jpeg" alt="" />
-              <h3 class="circle__name">ダミーサークル</h3>
-              <p class="circle__description">
-                ダミーテキストダミーテキストダミーテキスト
-              </p>
+              <img src="" alt="" />
+              <h3>競プロサークル</h3>
+              <p>アットコーダーを頑張るコミュニティです！ 初心者大歓迎！</p>
             </li>
           </a>
         </ul>
       </section>
 
-      <section class="new-arrival container">
-        <h2 class="section__title">新着サークル</h2>
+      <section class="pickup">
+        <div class="section__title__container">
+          <h2 class="section-title">PICKUP</h2>
+          <p>ピックアップ</p>
+        </div>
+
         <ul class="circle__items">
           <a href="#">
             <li class="circle__item">
-              <img src="images/sample.jpeg" alt="" />
-              <h3 class="circle__name">ダミーサークル</h3>
-              <p class="circle__description">
-                ダミーテキストダミーテキストダミーテキスト
-              </p>
+              <img src="" alt="" />
+              <h3>競プロサークル</h3>
+              <p>アットコーダーを頑張るコミュニティです！ 初心者大歓迎！</p>
             </li>
           </a>
           <a href="#">
             <li class="circle__item">
-              <img src="images/sample.jpeg" alt="" />
-              <h3 class="circle__name">ダミーサークル</h3>
-              <p class="circle__description">
-                ダミーテキストダミーテキストダミーテキスト
-              </p>
+              <img src="" alt="" />
+              <h3>競プロサークル</h3>
+              <p>アットコーダーを頑張るコミュニティです！ 初心者大歓迎！</p>
             </li>
           </a>
           <a href="#">
             <li class="circle__item">
-              <img src="images/sample.jpeg" alt="" />
-              <h3 class="circle__name">ダミーサークル</h3>
-              <p class="circle__description">
-                ダミーテキストダミーテキストダミーテキスト
-              </p>
+              <img src="" alt="" />
+              <h3>競プロサークル</h3>
+              <p>アットコーダーを頑張るコミュニティです！ 初心者大歓迎！</p>
             </li>
           </a>
           <a href="#">
             <li class="circle__item">
-              <img src="images/sample.jpeg" alt="" />
-              <h3 class="circle__name">ダミーサークル</h3>
-              <p class="circle__description">
-                ダミーテキストダミーテキストダミーテキスト
-              </p>
+              <img src="" alt="" />
+              <h3>競プロサークル</h3>
+              <p>アットコーダーを頑張るコミュニティです！ 初心者大歓迎！</p>
+            </li>
+          </a>
+          <a href="#">
+            <li class="circle__item">
+              <img src="" alt="" />
+              <h3>競プロサークル</h3>
+              <p>アットコーダーを頑張るコミュニティです！ 初心者大歓迎！</p>
+            </li>
+          </a>
+          <a href="#">
+            <li class="circle__item">
+              <img src="" alt="" />
+              <h3>競プロサークル</h3>
+              <p>アットコーダーを頑張るコミュニティです！ 初心者大歓迎！</p>
             </li>
           </a>
         </ul>
-        <div class="circle__btn__container">
-          <button class="circle__btn">一覧を見る</button>
-        </div>
       </section>
     </main>
-
-    <footer class="footer">
-      <img src="images/logo.svg" alt="" />
-    </footer>
   </body>
 </html>

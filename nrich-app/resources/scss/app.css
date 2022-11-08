@@ -178,6 +178,10 @@ body {
   line-height: 1.5rem;
 }
 
+.main {
+  padding-top: 108px;
+}
+
 .container {
   margin: 0 auto;
   padding: 20px 0;
@@ -204,12 +208,13 @@ body {
   background-color: #03dc03;
 }
 
-.section__title {
+.title {
   position: relative;
+  margin: 20px 0;
   font-size: 1.2rem;
   text-align: center;
 }
-.section__title::before {
+.title::before {
   position: absolute;
   content: "";
   display: block;
@@ -219,7 +224,7 @@ body {
   height: 2px;
   background-color: #03dc03;
 }
-.section__title::after {
+.title::after {
   position: absolute;
   content: "";
   display: block;
@@ -261,7 +266,6 @@ body {
 }
 
 .hero {
-  padding-top: 108px;
   width: 100%;
 }
 .hero__title {
@@ -394,7 +398,10 @@ body {
 }
 .circle__item img {
   width: 100%;
+  max-height: 200px;
   border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .circle__name {
   font-size: 1.1rem;
@@ -419,4 +426,90 @@ body {
   padding: 20px;
   border-top: 4px solid rgba(3, 220, 3, 0.5);
   text-align: center;
+}
+
+.about {
+  padding-top: 20px;
+  width: 100%;
+}
+.about__image {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  overflow: hidden;
+}
+.about__image__item {
+  display: inline-block;
+  margin: 0 auto;
+  width: 50%;
+}
+.about__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 80px;
+}
+.about__catchcopy {
+  padding-bottom: 12px;
+  font-size: 1.2rem;
+}
+.about__atmospheres {
+  padding-top: 40px;
+}
+.about__atmospheres__item {
+  position: relative;
+  padding: 10px 0;
+  text-align: center;
+}
+.about__atmospheres__item h4 {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 80px;
+  transform: translateY(-50%);
+  border-radius: 8px;
+  background-color: #f1f1f1;
+}
+.about__atmospheres__item p {
+  display: inline-block;
+  width: 80px;
+}
+.about__atmospheres__item span {
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+}
+.about__atmospheres__parameter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.about__details {
+  padding-top: 40px;
+}
+.about__details table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.about__details th, .about__details td {
+  padding: 10px 0;
+}
+.about__details tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+.about__memberships {
+  padding-top: 40px;
+}
+.about__memberships h3 {
+  padding: 20px 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.about__memberships__title {
+  padding: 20px 0 10px;
+  font-size: 1.1rem;
 }/*# sourceMappingURL=app.css.map */

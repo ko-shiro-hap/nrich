@@ -2,18 +2,17 @@
 @import "../global/mixin";
 
 .hero {
-  padding-top: 108px;
+  display: flex;
   width: 100%;
+  align-items: center;
 
-  &__title {
-    font-size: 1.6rem;
-    text-align: center;
-  }
+  &__image {
+    margin: 0 0 0 auto;
+    width: 70%;
 
-  &__slideshow {
-    margin-top: 20px;
-    width: 100%;
-    height: 300px;
-    background-color: $darkgray;
+    & img {
+      width: 100%;
+      border-radius: 16px;
+    }
   }
 }
