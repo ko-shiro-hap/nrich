@@ -6,6 +6,10 @@ body {
     line-height: 1.5rem;
 }
 
+.main {
+    padding-top: 108px;
+}
+
 .container {
     margin: 0 auto;
     padding: 20px 0;
@@ -35,8 +39,9 @@ body {
     }
 }
 
-.section__title {
+.title {
     position: relative;
+    margin: 20px 0;
     font-size: 1.2rem;
     text-align: center;
 

@@ -1,0 +1,106 @@
+@import "../global/variables";
+@import "../global/mixin";
+
+.about {
+    padding-top: 20px;
+    width: 100%;
+
+    &__image {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        overflow: hidden;
+
+        &__item {
+            display: inline-block;
+            margin: 0 auto;
+            width: 50%;
+        }
+    }
+
+    &__inner {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 20px;
+        padding-top: 80px;
+    }
+
+    &__catchcopy {
+        padding-bottom: 12px;
+        font-size: 1.2rem;
+    }
+
+    &__atmospheres {
+        padding-top: 40px;
+
+        &__item {
+            position: relative;
+            padding: 10px 0;
+            text-align: center;
+
+            & h4 {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 80px;
+                transform: translateY(-50%);
+                border-radius: 8px;
+                background-color: $lightgray;
+            }
+
+            & p {
+                display: inline-block;
+                width: 80px;
+            }
+
+            & span {
+                display: block;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background-color: $lightgray;
+            }
+        }
+
+        &__parameter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+        }
+    }
+
+    &__details {
+        padding-top: 40px;
+
+        & table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        & th,
+        & td {
+            padding: 10px 0;
+        }
+
+        & tr:nth-child(odd) {
+            background-color: $lightgray;
+        }
+    }
+
+    &__memberships {
+        padding-top: 40px;
+
+        & h3 {
+            padding: 20px 0;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        &__title {
+            padding: 20px 0 10px;
+            font-size: 1.1rem;
+        }
+    }
+}

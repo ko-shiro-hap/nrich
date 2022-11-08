@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('circle.index');
-});
+Route::resource('/circle', App\Http\Controllers\CircleController::class);
+
+Route::resource('admin', App\Http\Controllers\AdminController::class);
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+require __DIR__.'/auth.php';
