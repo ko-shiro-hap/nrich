@@ -26,16 +26,16 @@ body {
 .btn {
     padding: 12px;
     border-radius: 8px;
-    border: 1px solid $green;
+    border: 1px solid $main-color;
 
     &__register {
-        color: $green;
+        color: $main-color;
         background-color: $white;
     }
 
     &__login {
         color: $white;
-        background-color: $green;
+        background-color: $main-color;
     }
 }
 
@@ -53,7 +53,7 @@ body {
         left: calc(50% - 100px);
         width: 28px;
         height: 2px;
-        background-color: $green;
+        background-color: $main-color;
     }
 
     &::after {
@@ -64,6 +64,6 @@ body {
         right: calc(50% - 100px);
         width: 28px;
         height: 2px;
-        background-color: $green;
+        background-color: $main-color;
     }
 }

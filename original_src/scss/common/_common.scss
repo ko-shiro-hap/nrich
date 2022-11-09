@@ -6,4 +6,21 @@ body {
   max-width: 1200px;
   font-size: 14px;
   line-height: 1.5rem;
+  color: $font-color;
+}
+
+.section__title__container {
+  text-align: center;
+
+  & h2 {
+    display: inline-block;
+    padding-bottom: 4px;
+    font-size: 1.6rem;
+    border-bottom: 2px solid $main-color;
+  }
+
+  & p {
+    color: $sub-font-color;
+    font-weight: bold;
+  }
 }

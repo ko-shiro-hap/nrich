@@ -126,6 +126,7 @@ a {
   vertical-align: baseline;
   background: transparent;
   text-decoration: none;
+  color: #333;
 }
 
 /* change colours to suit your needs */
@@ -178,6 +179,21 @@ body {
   max-width: 1200px;
   font-size: 14px;
   line-height: 1.5rem;
+  color: #333;
+}
+
+.section__title__container {
+  text-align: center;
+}
+.section__title__container h2 {
+  display: inline-block;
+  padding-bottom: 4px;
+  font-size: 1.6rem;
+  border-bottom: 2px solid #04baf3;
+}
+.section__title__container p {
+  color: #787878;
+  font-weight: bold;
 }
 
 .header {
@@ -239,48 +255,56 @@ body {
   border-radius: 8px;
 }
 
-.circle {
-  padding: 20px 0;
-}
 .circle__items {
   padding: 20px 0;
   display: flex;
   gap: 10px;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .circle__item {
   position: relative;
-  padding: 10px;
-  max-width: 440px;
-  border: 2px solid #f1f1f1;
-  border-top: none;
+  max-width: 380px;
   border-radius: 8px;
-  color: #333;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
   transition: all 0.5s;
 }
 .circle__item:hover {
-  background-color: rgba(3, 220, 3, 0.1);
-  border-color: #03dc03;
+  background-color: rgba(4, 186, 243, 0.1);
+  box-shadow: 0px 5px 15px 0px rgba(4, 186, 243, 0.35);
 }
 .circle__item img {
   width: 100%;
   border-radius: 8px;
 }
-.circle__name {
-  font-size: 1.1rem;
-  text-decoration: none;
+.circle__item__texts {
+  padding: 10px 10px 20px;
 }
-.circle__btn {
-  padding: 10px 120px;
+.circle__item__texts h3 {
+  padding-bottom: 10px;
   font-size: 1.2rem;
-  color: #03dc03;
-  background-color: #fff;
-  border: 2px solid #03dc03;
-  border-radius: 8px;
 }
-.circle__btn__container {
-  padding-top: 10px;
-  width: 100%;
-  text-align: center;
+.circle__item__texts p {
+  font-weight: bold;
+}
+.circle__item__categories {
+  display: flex;
+  gap: 4px;
+  justify-content: right;
+}
+.circle__item__categories a {
+  display: block;
+  padding: 2px 4px;
+  background-color: #d9d9d9;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.new-arrival {
+  padding-top: 80px;
+}
+
+.pickup {
+  padding-top: 80px;
 }/*# sourceMappingURL= style.css.map */
