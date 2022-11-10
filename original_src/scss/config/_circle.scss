@@ -2,6 +2,12 @@
 @import "../global/mixin";
 
 .circle {
+  &__title {
+    display: inline-block;
+    padding-bottom: 8px;
+    border-bottom: 3px solid $main-color;
+  }
+
   &__items {
     padding: 20px 0;
     display: flex;
@@ -37,21 +43,6 @@
 
       & p {
         font-weight: bold;
-      }
-    }
-
-    &__categories {
-      display: flex;
-      gap: 4px;
-      justify-content: right;
-
-      & a {
-        display: block;
-        padding: 2px 4px;
-        background-color: $lightgray;
-        font-size: 0.8rem;
-        font-weight: bold;
-        border-radius: 4px;
       }
     }
   }

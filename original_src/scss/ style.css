@@ -196,6 +196,20 @@ body {
   font-weight: bold;
 }
 
+.categories {
+  display: flex;
+  gap: 4px;
+  justify-content: right;
+}
+.categories a {
+  display: block;
+  padding: 2px 4px;
+  background-color: #d9d9d9;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
 .header {
   display: flex;
   margin: 0 auto;
@@ -210,12 +224,31 @@ body {
 .header__nav {
   display: flex;
   gap: 20px;
+  font-weight: bold;
 }
 
 .hero {
   display: flex;
   width: 100%;
   align-items: center;
+}
+.hero__box {
+  position: absolute;
+  padding: 40px;
+  width: 400px;
+  background-color: white;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+  border-radius: 16px;
+}
+.hero__box h2 {
+  display: inline-block;
+  font-size: 1.8rem;
+}
+.hero__box p {
+  padding: 40px 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.5;
 }
 .hero__image {
   margin: 0 0 0 auto;
@@ -226,17 +259,6 @@ body {
   border-radius: 16px;
 }
 
-.search {
-  position: absolute;
-  padding: 40px;
-  width: 400px;
-  background-color: white;
-  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
-  border-radius: 16px;
-}
-.search h2 {
-  font-size: 1.8rem;
-}
 .search__input {
   display: block;
   margin-top: 20px;
@@ -255,6 +277,11 @@ body {
   border-radius: 8px;
 }
 
+.circle__title {
+  display: inline-block;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #04baf3;
+}
 .circle__items {
   padding: 20px 0;
   display: flex;
@@ -287,19 +314,6 @@ body {
 .circle__item__texts p {
   font-weight: bold;
 }
-.circle__item__categories {
-  display: flex;
-  gap: 4px;
-  justify-content: right;
-}
-.circle__item__categories a {
-  display: block;
-  padding: 2px 4px;
-  background-color: #d9d9d9;
-  font-size: 0.8rem;
-  font-weight: bold;
-  border-radius: 4px;
-}
 
 .new-arrival {
   padding-top: 80px;
@@ -307,4 +321,129 @@ body {
 
 .pickup {
   padding-top: 80px;
+}
+
+.detail-section {
+  padding-top: 120px;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.summary__text {
+  margin: 20px auto 0;
+  padding: 10px;
+  text-align: left;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+  border-radius: 8px;
+}
+
+.information table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.information th {
+  padding-top: 10px;
+  width: 200px;
+}
+.information td {
+  padding: 10px 0;
+}
+.information tr:nth-child(odd) {
+  background-color: #efefef;
+}
+
+.atmospheres__item {
+  position: relative;
+  padding: 20px 0;
+  text-align: center;
+}
+.atmospheres__item h4 {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 50px;
+  padding: 4px 10px;
+  transform: translateY(-50%);
+  border-radius: 8px;
+  background-color: #d9d9d9;
+}
+.atmospheres__item p {
+  display: inline-block;
+  width: 80px;
+  font-weight: bold;
+}
+.atmospheres__item span {
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+}
+.atmospheres__parameter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+}
+
+.how-to-join__form {
+  display: flex;
+  gap: 20px;
+  padding-top: 40px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.how-to-join__item {
+  width: calc(50% - 10px);
+}
+.how-to-join__item p {
+  font-weight: bold;
+}
+.how-to-join__item input {
+  width: 100%;
+  border-radius: 4px;
+  border-color: #d9d9d9;
+  font-size: 20px;
+}
+.how-to-join__radio {
+  display: flex;
+}
+.how-to-join__radio input {
+  margin: 0 20px 0 4px;
+  width: 12px;
+}
+.how-to-join__textarea {
+  width: 100%;
+}
+.how-to-join__textarea input {
+  height: 160px;
+}
+.how-to-join button {
+  justify-self: start;
+  margin-top: 20px;
+  padding: 10px 32px;
+  color: white;
+  font-size: 1.2rem;
+  background-color: #04baf3;
+  border: none;
+  border-radius: 8px;
+}
+.how-to-join small {
+  display: block;
+  padding-top: 8px;
+  font-size: 0.8rem;
+  color: #787878;
+}
+
+.detail__search {
+  padding-top: 80px;
+}
+.detail__search .search {
+  padding: 40px;
+  width: calc(100% - 80px);
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+  border-radius: 16px;
 }/*# sourceMappingURL= style.css.map */

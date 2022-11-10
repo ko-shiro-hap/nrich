@@ -2,17 +2,6 @@
 @import "../global/mixin";
 
 .search {
-  position: absolute;
-  padding: 40px;
-  width: 400px;
-  background-color: white;
-  box-shadow: $shadow;
-  border-radius: 16px;
-
-  & h2 {
-    font-size: 1.8rem;
-  }
-
   &__input {
     display: block;
     margin-top: 20px;
