@@ -2,68 +2,40 @@
 @import "../global/mixin";
 
 body {
+    margin: 0 auto;
+    max-width: 1200px;
     font-size: 14px;
     line-height: 1.5rem;
+    color: $font-color;
 }
 
-.main {
-    padding-top: 108px;
-}
-
-.container {
-    margin: 0 auto;
-    padding: 20px 0;
-    max-width: 960px;
-    width: 100%;
-
-    &__title {
-        padding: 20px 0;
-        font-size: 1.2rem;
-        text-align: center;
-    }
-}
-
-.btn {
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid $main-color;
-
-    &__register {
-        color: $main-color;
-        background-color: $white;
-    }
-
-    &__login {
-        color: $white;
-        background-color: $main-color;
-    }
-}
-
-.title {
-    position: relative;
-    margin: 20px 0;
-    font-size: 1.2rem;
+.section__title__container {
     text-align: center;
 
-    &::before {
-        position: absolute;
-        content: "";
-        display: block;
-        top: 50%;
-        left: calc(50% - 100px);
-        width: 28px;
-        height: 2px;
-        background-color: $main-color;
+    & h2 {
+        display: inline-block;
+        padding-bottom: 4px;
+        font-size: 1.6rem;
+        border-bottom: 2px solid $main-color;
     }
 
-    &::after {
-        position: absolute;
-        content: "";
+    & p {
+        color: $sub-font-color;
+        font-weight: bold;
+    }
+}
+
+.categories {
+    display: flex;
+    gap: 4px;
+    justify-content: right;
+
+    & a {
         display: block;
-        top: 50%;
-        right: calc(50% - 100px);
-        width: 28px;
-        height: 2px;
-        background-color: $main-color;
+        padding: 2px 4px;
+        background-color: $lightgray;
+        font-size: 0.8rem;
+        font-weight: bold;
+        border-radius: 4px;
     }
 }

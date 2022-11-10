@@ -59,7 +59,7 @@ class CircleController extends Controller
         $circle = Circle::find($id);
         $images = CircleImage::where('circle_id', '=', $id)->first();
 
-        return view('circle.about', ['user'=>$user, 'circle'=>$circle, 'images'=>$images]);
+        return view('circle.detail', ['user'=>$user, 'circle'=>$circle, 'images'=>$images]);
     }
 
     /**
