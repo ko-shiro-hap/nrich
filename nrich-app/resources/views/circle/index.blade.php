@@ -2,140 +2,43 @@
 
 @section('header-nav')
     <nav class="header__nav">
-        <ul class="header__items">
-            <li class="header__item"><a href="#">履修情報</a></li>
-            <li class="header__item"><a href="{{ route('circle.index') }}">サークル</a></li>
-            <li class="header__item"><a href="#">Nrichについて</a></li>
-        </ul>
         @guest
-            <a href="/register"><button class="btn btn__register">登録(無料)</button></a>
-            <a href="/login"><button class="btn btn__login">ログイン</button></a>
+            <a href="/register">登録(無料)</a>
+            <a href="/login">ログイン</a>
         @endguest
         @auth
-            <a href="/register"><button class="btn btn__register">{{ $user->name }}</button></a>
-            <a href="/login"><button class="btn btn__login">ログアウト</button></a>
+            <a href="/register">{{ $user->name }}</a>
+            <a href="/login">ログアウト</a>
         @endauth
     </nav>
 @endsection
 
 @section('content')
+    <!-- ヒーロー開始 -->
     <section class="hero">
-        <h1 class="hero__title">サークル</h1>
-        <div class="hero__slideshow"></div>
-    </section>
+        <div class="hero__box search">
+            <h2>最高のサークルを探す</h2>
 
-    <section class="search container">
-        <div class="search__input__container">
-            <input type="text" class="search__input" placeholder="サークル・団体名/活動内容など" />
-            <div class="search__icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
+            <form action="">
+                <input type="text" class="search__input" placeholder="カテゴリ" />
+                <input type="text" class="search__input" placeholder="ジャンル" />
+                <input type="text" class="search__input" placeholder="特徴" />
+                <button class="search__button">検索する</button>
+            </form>
         </div>
-        <div class="dropdown">
-            <div class="dropdown__container">
-                <div class="dropdown__headline">
-                    <h3>ジャンルから探す</h3>
-                </div>
-                <div class="dropdown__icon" id="genre-btn">
-                    <i class="fa-solid fa-caret-down"></i>
-                </div>
-            </div>
-            <div class="dropdown__menu" id="genre-menu">
-                <ul class="dropdown__items">
-                    <li class="dropdown__item">
-                        <div class="dropdown__item__container">
-                            <input type="checkbox" class="dropdown__checkbox" />ダミー
-                        </div>
-                    </li>
-                    <li class="dropdown__item">
-                        <div class="dropdown__item__container">
-                            <input type="checkbox" class="dropdown__checkbox" />ダミー
-                        </div>
-                    </li>
-                    <li class="dropdown__item">
-                        <div class="dropdown__item__container">
-                            <input type="checkbox" class="dropdown__checkbox" />ダミー
-                        </div>
-                    </li>
-                    <li class="dropdown__item">
-                        <div class="dropdown__item__container">
-                            <input type="checkbox" class="dropdown__checkbox" />ダミー
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="dropdown__container">
-                <div class="dropdown__headline">
-                    <h3>キャンパスから探す</h3>
-                </div>
-                <div class="dropdown__icon" id="campus-btn">
-                    <i class="fa-solid fa-caret-down"></i>
-                </div>
-            </div>
-            <div class="dropdown__menu" id="campus-menu">
-                <ul class="dropdown__items">
-                    <li class="dropdown__item">
-                        <div class="dropdown__item__container">
-                            <input type="checkbox" class="dropdown__checkbox" />ダミー
-                        </div>
-                    </li>
-                    <li class="dropdown__item">
-                        <div class="dropdown__item__container">
-                            <input type="checkbox" class="dropdown__checkbox" />ダミー
-                        </div>
-                    </li>
-                    <li class="dropdown__item">
-                        <div class="dropdown__item__container">
-                            <input type="checkbox" class="dropdown__checkbox" />ダミー
-                        </div>
-                    </li>
-                    <li class="dropdown__item">
-                        <div class="dropdown__item__container">
-                            <input type="checkbox" class="dropdown__checkbox" />ダミー
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="dropdown__container">
-                <div class="dropdown__headline">
-                    <h3>こだわりから探す</h3>
-                </div>
-                <div class="dropdown__icon" id="obsession-btn">
-                    <i class="fa-solid fa-caret-down"></i>
-                </div>
-            </div>
-            <div class="dropdown__menu" id="obsession-menu">
-                <ul class="dropdown__items">
-                    <li class="dropdown__item">
-                        <div class="dropdown__item__container">
-                            <input type="checkbox" class="dropdown__checkbox" />ダミー
-                        </div>
-                    </li>
-                    <li class="dropdown__item">
-                        <div class="dropdown__item__container">
-                            <input type="checkbox" class="dropdown__checkbox" />ダミー
-                        </div>
-                    </li>
-                    <li class="dropdown__item">
-                        <div class="dropdown__item__container">
-                            <input type="checkbox" class="dropdown__checkbox" />ダミー
-                        </div>
-                    </li>
-                    <li class="dropdown__item">
-                        <div class="dropdown__item__container">
-                            <input type="checkbox" class="dropdown__checkbox" />ダミー
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="search__btn__container">
-            <button class="search__btn">検索する</button>
+        <div class="hero__image">
+            <img src="{{ asset('images/hero.jpg') }}" alt="" />
         </div>
     </section>
 
-    <section class="circle container">
-        <h2 class="title">ピックアップ</h2>
+    <!-- サークル表示開始 -->
+    {{-- 新着サークル開始 --}}
+    <section class="new-arrival">
+        <div class="section__title__container">
+            <h2>LATEST</h2>
+            <p>新着サークル</p>
+        </div>
+
         <ul class="circle__items">
             @foreach ($circles as $circle)
                 <a href="{{ route('circle.show', $circle->id) }}">
@@ -143,35 +46,45 @@
                         @foreach ($circle->circleImages as $image)
                             <img src="{{ asset('images/circle/' . $image->hero_img) }}" alt="メイン画像" />
                         @endforeach
-                        <h3 class="circle__name">{{ $circle->name }}</h3>
-                        <p class="circle__description">
-                            circleDetailsのcatch_copyが入ります
-                        </p>
+                        <div class="circle__item__texts">
+                            <h3>{{ $circle->name }}</h3>
+                            <p>アットコーダーを頑張るコミュニティです！ 初心者大歓迎！（仮）</p>
+                            <div class="categories">
+                                <a href="">初心者歓迎(仮)</a>
+                                <a href="">プログラミング(仮)</a>
+                            </div>
+                        </div>
                     </li>
                 </a>
             @endforeach
         </ul>
     </section>
 
-    <section class="new-arrival container">
-        <h2 class="title">新着サークル</h2>
+    {{-- ピックアップサークル開始 --}}
+    <section class="pickup">
+        <div class="section__title__container">
+            <h2 class="section-title">PICKUP</h2>
+            <p>ピックアップ</p>
+        </div>
+
         <ul class="circle__items">
             @foreach ($circles as $circle)
-                <a href="#">
+                <a href="{{ route('circle.show', $circle->id) }}">
                     <li class="circle__item">
                         @foreach ($circle->circleImages as $image)
-                            <img src="{{ asset('images/circle/' . $image->hero_img) }}" alt="" />
+                            <img src="{{ asset('images/circle/' . $image->hero_img) }}" alt="メイン画像" />
                         @endforeach
-                        <h3 class="circle__name">{{ $circle->name }}</h3>
-                        <p class="circle__description">
-                            circleDetailsのcatch_copyが入ります
-                        </p>
+                        <div class="circle__item__texts">
+                            <h3>{{ $circle->name }}</h3>
+                            <p>アットコーダーを頑張るコミュニティです！ 初心者大歓迎！（仮）</p>
+                            <div class="categories">
+                                <a href="">初心者歓迎(仮)</a>
+                                <a href="">プログラミング(仮)</a>
+                            </div>
+                        </div>
                     </li>
                 </a>
             @endforeach
         </ul>
-        <div class="circle__btn__container">
-            <button class="circle__btn">一覧を見る</button>
-        </div>
     </section>
 @endsection

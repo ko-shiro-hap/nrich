@@ -2,8 +2,13 @@
 @import "../global/mixin";
 
 .footer {
-  margin-top: 20px;
-  padding: 20px;
-  border-top: 4px solid rgba($green, 0.5);
-  text-align: center;
+    margin-top: 80px;
+    padding: 20px;
+    border-top: 4px solid rgba($main-color, 0.5);
+    text-align: center;
+
+    & h1 {
+        font-size: 1.5rem;
+        color: $sub-font-color;
+    }
 }

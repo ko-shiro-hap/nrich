@@ -1,0 +1,152 @@
+@import "../global/variables";
+@import "../global/mixin";
+
+.detail-section {
+  padding-top: 120px;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.summary {
+  &__text {
+    margin: 20px auto 0;
+    padding: 10px;
+    text-align: left;
+    box-shadow: $shadow;
+    border-radius: 8px;
+  }
+}
+
+.information {
+  & table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  & th {
+    padding-top: 10px;
+    width: 200px;
+  }
+
+  & td {
+    padding: 10px 0;
+  }
+
+  & tr:nth-child(odd) {
+    background-color: $table-color;
+  }
+}
+
+.atmospheres {
+  &__item {
+    position: relative;
+    padding: 20px 0;
+    text-align: center;
+
+    & h4 {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 50px;
+      padding: 4px 10px;
+      transform: translateY(-50%);
+      border-radius: 8px;
+      background-color: $lightgray;
+    }
+
+    & p {
+      display: inline-block;
+      width: 80px;
+      font-weight: bold;
+    }
+
+    & span {
+      display: block;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: $lightgray;
+    }
+  }
+
+  &__parameter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+  }
+}
+
+.how-to-join {
+  &__form {
+    display: flex;
+    gap: 20px;
+    padding-top: 40px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    width: calc(50% - 10px);
+
+    & p {
+      font-weight: bold;
+    }
+
+    & input {
+      width: 100%;
+      border-radius: 4px;
+      border-color: $lightgray;
+      font-size: 20px;
+    }
+  }
+
+  &__radio {
+    display: flex;
+
+    & input {
+      margin: 0 20px 0 4px;
+      width: 12px;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+
+    & input {
+      height: 160px;
+    }
+  }
+
+  & button {
+    justify-self: start;
+    margin-top: 20px;
+    padding: 10px 32px;
+    color: white;
+    font-size: 1.2rem;
+    background-color: $main-color;
+    border: none;
+    border-radius: 8px;
+  }
+
+  & small {
+    display: block;
+    padding-top: 8px;
+    font-size: 0.8rem;
+    color: $sub-font-color;
+  }
+}
+
+.detail__search {
+  padding-top: 80px;
+
+  & .search {
+    padding: 40px;
+    width: calc(100% - 80px);
+    box-shadow: $shadow;
+    border-radius: 16px;
+  }
+}
