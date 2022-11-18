@@ -19,14 +19,14 @@
     <section class="hero">
         <div class="hero__box">
             <h2 class="circle__title">{{ $circle->name }}</h2>
-            <p>AtCoderを頑張るコミュニティです！<br />初心者大歓迎！</p>
+            <p>{{ $circle->catchphrase }}</p>
             <div class="categories">
                 <a href="">初心者歓迎</a>
                 <a href="">プログラミング</a>
             </div>
         </div>
         <div class="hero__image">
-            <img src="{{ asset('images/circle/' . $images->hero_img) }}" alt="メイン画像">
+            <img src="{{ asset('images/circle/' . $circle->hero_image) }}" alt="メイン画像">
         </div>
     </section>
 
@@ -36,12 +36,7 @@
         <div class="section__title__container">
             <h2>SUMMARY</h2>
             <p>どんな団体？</p>
-            <p class="summary__text">
-                私たちは、競技プログラミングの上達を目指すサークルです！<br />
-                主にAtCoderと言われるサイトが開催している競プロ大会に参加して、レートを上げることを目標にしています。<br />
-                プログラミング初心者の方でも楽しく活動できますプログラミング興味あるけど何から始めたらいいかわからなくて手をつけられないと感じている人や、周りに競プロやっている人がいなくて仲間が欲しい人など大歓迎です！！<br />
-                ぜひ一度遊びに来てください！
-            </p>
+            <p class="summary__text">{{ $circle->summary }}</p>
         </div>
     </section>
 
@@ -58,27 +53,31 @@
             </tr>
             <tr>
                 <th>人数</th>
-                <td>男:n人 女:n人</td>
+                <td>男:{{ $circle->number_of_men }}人 女:{{ $circle->number_of_women }}人</td>
             </tr>
             <tr>
                 <th>活動場所</th>
-                <td>活動場所が入ります</td>
+                <td>{{ $circle->location }}</td>
             </tr>
             <tr>
                 <th>活動日数</th>
-                <td>活動日数が入ります</td>
+                <td>{{ $circle->frequency }}</td>
             </tr>
             <tr>
-                <th>入会費・会費</th>
-                <td>入会金:10000円 会費:5000円</td>
+                <th>入会費</th>
+                <td>{{ $circle->membership_fee }}</td>
+            </tr>
+            <tr>
+                <th>会費</th>
+                <td>{{ $circle->admission_fee }}</td>
             </tr>
             <tr>
                 <th>初期費用</th>
-                <td>初期費用が入ります</td>
+                <td>{{ $circle->initial_cost }}</td>
             </tr>
             <tr>
                 <th>合宿回数</th>
-                <td>n回</td>
+                <td>{{ $circle->number_of_camps }}</td>
             </tr>
         </table>
     </section>

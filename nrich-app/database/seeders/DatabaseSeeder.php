@@ -22,6 +22,5 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call(CirclesTableSeeder::class);
-        $this->call(CircleImagesTableSeeder::class);
     }
 }

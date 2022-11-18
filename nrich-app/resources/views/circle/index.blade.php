@@ -43,12 +43,10 @@
             @foreach ($circles as $circle)
                 <a href="{{ route('circle.show', $circle->id) }}">
                     <li class="circle__item">
-                        @foreach ($circle->circleImages as $image)
-                            <img src="{{ asset('images/circle/' . $image->hero_img) }}" alt="メイン画像" />
-                        @endforeach
+                        <img src="{{ asset('images/circle/' . $circle->hero_image) }}" alt="メイン画像" />
                         <div class="circle__item__texts">
                             <h3>{{ $circle->name }}</h3>
-                            <p>アットコーダーを頑張るコミュニティです！ 初心者大歓迎！（仮）</p>
+                            <p>{{ $circle->catchphrase }}</p>
                             <div class="categories">
                                 <a href="">初心者歓迎(仮)</a>
                                 <a href="">プログラミング(仮)</a>
@@ -71,9 +69,7 @@
             @foreach ($circles as $circle)
                 <a href="{{ route('circle.show', $circle->id) }}">
                     <li class="circle__item">
-                        @foreach ($circle->circleImages as $image)
-                            <img src="{{ asset('images/circle/' . $image->hero_img) }}" alt="メイン画像" />
-                        @endforeach
+                        <img src="{{ asset('images/circle/' . $circle->hero_image) }}" alt="メイン画像" />
                         <div class="circle__item__texts">
                             <h3>{{ $circle->name }}</h3>
                             <p>アットコーダーを頑張るコミュニティです！ 初心者大歓迎！（仮）</p>

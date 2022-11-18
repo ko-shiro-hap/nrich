@@ -16,17 +16,7 @@ class Circle extends Model
 
 
 //リレーション名
-    public function CircleImages() {
-        return $this->hasMany('App\Models\CircleImage');
-    }
 
-    public function CircleDetails() {
-        return $this->hasMany('App\Models\CircleDetails');
-    }
-
-    public function CircleAtmospheres() {
-        return $this->hasMany('App\Models\CircleAtmosphere');
-    }
 
     use HasFactory;
 }
