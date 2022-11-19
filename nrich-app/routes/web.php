@@ -15,7 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('/circle', App\Http\Controllers\CircleController::class);
 
-Route::resource('admin', App\Http\Controllers\AdminController::class);
+// Admin/Login
+Route::get('/admin/login', [App\Http\Controllers\Admin\LoginController::class, 'index'])->name('admin.login');
+Route::post('/admin/login', [App\Http\Controllers\Admin\LoginController::class, 'login']);
+Route::get('/admin/logout', [App\Http\Controllers\Admin\LoginController::class, 'logout']);
+
+// Admin
+Route::resource('/admin', App\Http\Controllers\Admin\IndexController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
