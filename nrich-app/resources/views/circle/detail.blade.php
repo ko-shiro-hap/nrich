@@ -8,8 +8,8 @@
             <a href="/login">ログイン</a>
         @endguest
         @auth
-            <a href="/register">{{ $user->name }}</a>
-            <a href="/login">ログアウト</a>
+            <p>{{ $user->name }}</p>
+            <a href="logout">ログアウト</a>
         @endauth
     </nav>
 @endsection
