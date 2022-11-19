@@ -5,15 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Circle extends Model
+class University extends Model
 {
-    protected $table = 'circles';
+    protected $table = 'universities';
 
     protected $fillable =
     [
         'name',
     ];
-
 
     use HasFactory;
 }
