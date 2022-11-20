@@ -24,5 +24,7 @@ class DatabaseSeeder extends Seeder
         $this->call(CirclesTableSeeder::class);
         $this->call(AdministratorsTableSeeder::class);
         $this->call(UniversitiesTableSeeder::class);
+        $this->call(CategoriesTableSeeder::class);
+        $this->call(CircleCategoryTableSeeder::class);
     }
 }

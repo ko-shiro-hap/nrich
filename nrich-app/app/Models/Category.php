@@ -5,21 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Circle extends Model
+class Category extends Model
 {
-    protected $table = 'circles';
+    protected $table = 'categories';
 
     protected $fillable =
     [
-        'name',
+        'category',
     ];
-
 
     use HasFactory;
 
 
 
-    public function categories(){
-        return $this->belongsToMany(Category::class);
-        }
+    public function circles(){
+    return $this->belongsToMany(Circle::class);
+    }
 }
