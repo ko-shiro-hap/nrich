@@ -21,8 +21,9 @@
             <h2 class="circle__title">{{ $circle->name }}</h2>
             <p>{{ $circle->catchphrase }}</p>
             <div class="categories">
-                <a href="">初心者歓迎</a>
-                <a href="">プログラミング</a>
+                @foreach ($circle->categories as $category)
+                    <a class="categories__item categories__item--large" href="#">{{ $category->category }}</a>
+                @endforeach
             </div>
         </div>
         <div class="hero__image">

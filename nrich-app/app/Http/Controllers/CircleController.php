@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 // 追記
 use Auth;
 use App\Models\Circle;
+use App\Models\Category;
 
 class CircleController extends Controller
 {
@@ -18,8 +19,10 @@ class CircleController extends Controller
     public function index()
     {
         $user = Auth::user();
-
         $circles = Circle::get();
+        // $categories = Circle::find(1)->categories->all();
+
+
 
         return view('circle.index', ['user'=>$user, 'circles'=>$circles]);
     }

@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class CircleCategoryTableSeeder extends Seeder
+class CategoryCircleTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,7 +15,7 @@ class CircleCategoryTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('circle_category')->insert (
+        DB::table('category_circle')->insert (
             [
                 [
                     'circle_id' => '1',

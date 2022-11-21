@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('circle_category', function (Blueprint $table) {
+        Schema::create('category_circle', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('circle_id');//サークルID
             $table->unsignedBigInteger('category_id');//カテゴリー ID
@@ -31,7 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('circle_category');
-
+        Schema::dropIfExists('category_circle');
     }
 };

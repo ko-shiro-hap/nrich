@@ -48,8 +48,9 @@
                             <h3>{{ $circle->name }}</h3>
                             <p>{{ $circle->catchphrase }}</p>
                             <div class="categories">
-                                <a href="">初心者歓迎(仮)</a>
-                                <a href="">プログラミング(仮)</a>
+                                @foreach ($circle->categories as $category)
+                                    <a class="categories__item" href="#">{{ $category->category }}</a>
+                                @endforeach
                             </div>
                         </div>
                     </li>
@@ -74,8 +75,9 @@
                             <h3>{{ $circle->name }}</h3>
                             <p>アットコーダーを頑張るコミュニティです！ 初心者大歓迎！（仮）</p>
                             <div class="categories">
-                                <a href="">初心者歓迎(仮)</a>
-                                <a href="">プログラミング(仮)</a>
+                                @foreach ($circle->categories as $category)
+                                    <a class="categories__item" href="#">{{ $category->category }}</a>
+                                @endforeach
                             </div>
                         </div>
                     </li>

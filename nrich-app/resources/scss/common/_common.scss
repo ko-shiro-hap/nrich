@@ -30,12 +30,21 @@ body {
     gap: 4px;
     justify-content: right;
 
-    & a {
+    &__item {
         display: block;
         padding: 2px 4px;
         background-color: $lightgray;
         font-size: 0.8rem;
         font-weight: bold;
         border-radius: 4px;
+        transition: background-color 0.5s;
+
+        &:hover {
+            background-color: $main-color;
+        }
+
+        &--large {
+            font-size: 1.1rem;
+        }
     }
 }

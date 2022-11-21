@@ -24,3 +24,8 @@ class UniversitiesTableSeeder extends Seeder
         );
     }
 }
+
+
+
+
+
