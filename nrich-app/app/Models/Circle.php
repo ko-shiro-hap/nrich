@@ -15,11 +15,15 @@ class Circle extends Model
     ];
 
 
-    use HasFactory;
-
-
-
+    //多対多のリレーション
     public function categories(){
         return $this->belongsToMany(Category::class);
-        }
+    }
+
+    public function campuses(){
+        return $this->belongsToMany(Campus::class);
+    }
+
+
+    use HasFactory;
 }

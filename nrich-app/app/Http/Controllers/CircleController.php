@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 // 追記
 use Auth;
 use App\Models\Circle;
-use App\Models\Category;
 
 class CircleController extends Controller
 {
