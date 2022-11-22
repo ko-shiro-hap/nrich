@@ -27,6 +27,10 @@
                 @foreach ($circle->campuses as $campus)
                     <a class="attributes__item attributes__campus" href="#">{{ $campus->campus }}</a>
                 @endforeach
+                @foreach ($circle->characteristics as $characteristic)
+                    <a class="attributes__item attributes__characteristic"
+                        href="#">{{ $characteristic->characteristic }}</a>
+                @endforeach
             </div>
         </div>
         <div class="hero__image">
@@ -125,7 +129,7 @@
                 <span></span>
                 <span></span>
                 <span></span>
-                <p>経験者感激</p>
+                <p>経験者歓迎</p>
             </div>
         </div>
         <div class="atmospheres__item">

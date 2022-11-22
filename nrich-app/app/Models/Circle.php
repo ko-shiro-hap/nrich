@@ -16,12 +16,17 @@ class Circle extends Model
 
 
     //多対多のリレーション
+    // カテゴリー
     public function categories(){
         return $this->belongsToMany(Category::class);
     }
-
+    //キャンパス
     public function campuses(){
         return $this->belongsToMany(Campus::class);
+    }
+    //特徴
+    public function characteristics(){
+        return $this->belongsToMany(Characteristic::class);
     }
 
 

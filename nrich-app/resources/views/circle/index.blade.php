@@ -55,6 +55,10 @@
                                 @foreach ($circle->campuses as $campus)
                                     <a class="attributes__item attributes__campus" href="#">{{ $campus->campus }}</a>
                                 @endforeach
+                                @foreach ($circle->characteristics as $characteristic)
+                                    <a class="attributes__item attributes__characteristic"
+                                        href="#">{{ $characteristic->characteristic }}</a>
+                                @endforeach
                             </div>
                         </div>
                     </li>
@@ -77,7 +81,7 @@
                         <img src="{{ asset('images/circle/' . $circle->hero_image) }}" alt="メイン画像" />
                         <div class="circle__item__texts">
                             <h3>{{ $circle->name }}</h3>
-                            <p>アットコーダーを頑張るコミュニティです！ 初心者大歓迎！（仮）</p>
+                            <p>{{ $circle->catchphrase }}</p>
                             <div class="attributes">
                                 @foreach ($circle->categories as $category)
                                     <a class="attributes__item attributes__category"
@@ -85,6 +89,10 @@
                                 @endforeach
                                 @foreach ($circle->campuses as $campus)
                                     <a class="attributes__item attributes__campus" href="#">{{ $campus->campus }}</a>
+                                @endforeach
+                                @foreach ($circle->characteristics as $characteristic)
+                                    <a class="attributes__item attributes__characteristic"
+                                        href="#">{{ $characteristic->characteristic }}</a>
                                 @endforeach
                             </div>
                         </div>

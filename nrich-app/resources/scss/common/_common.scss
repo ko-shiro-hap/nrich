@@ -29,6 +29,7 @@ body {
     display: flex;
     gap: 4px;
     justify-content: right;
+    flex-wrap: wrap;
 
     &__item {
         display: block;
@@ -44,11 +45,15 @@ body {
         }
     }
 
-    &__category_color {
+    &__category {
         background-color: $category_color;
     }
 
     &__campus {
         background-color: $campus_color;
+    }
+
+    &__characteristic {
+        background-color: $Characteristic_color;
     }
 }

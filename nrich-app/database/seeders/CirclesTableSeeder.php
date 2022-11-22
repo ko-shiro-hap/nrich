@@ -118,6 +118,31 @@ class CirclesTableSeeder extends Seeder
                     'image2' => 'KatZwei_2.jpeg',
                     'image3' => 'KatZwei_3.jpeg',
                 ],
+                [
+                    'university_id' => 1,
+                    'name' => '競プロサークル',
+                    'catchphrase' => 'AtCoderを頑張るコミュニティです！初心者大歓迎！',
+                    'summary' => '私たちは、競技プログラミングの上達を目指すサークルです！
+                    主にAtCoderと言われるサイトが開催している競プロ大会に参加して、レートを上げることを目標にしています。
+                    プログラミング初心者の方でも楽しく活動できますプログラミング興味あるけど何から始めたらいいかわからなくて手をつけられないと感じている人や、周りに競プロやっている人がいなくて仲間が欲しい人など大歓迎です！！
+                    ぜひ一度遊びに来てください！',
+                    'number_of_men' => 12,
+                    'number_of_women' => 5,
+                    'location' => 'POSSE大学八王子キャンパス　１N-０２６教室　オンラインなど',
+                    'frequency' => '周２〜3日程度　毎週月曜（19:00〜22:00）定例会あり',
+                    'membership_fee' => 'なし',
+                    'admission_fee' => '月22,000円',
+                    'initial_cost' => '持ってなければパソコン代（そこそこのスペックあった方が良いかも）',
+                    'number_of_camps' => '任意参加　年2回程度',
+                    'seriousness' => 4,
+                    'relationship' => 2,
+                    'experience' => 3,
+                    'freedom' => 3,
+                    'hero_image' => 'KatZwei_hero.jpeg',
+                    'image1' => '競プロサークル.jpeg',
+                    'image2' => '競プロサークル.jpeg',
+                    'image3' => '競プロサークル.jpeg',
+                ],
             ]
         );
     }
