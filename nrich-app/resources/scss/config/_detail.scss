@@ -40,6 +40,11 @@
 }
 
 .atmospheres {
+    &__chart {
+        padding-top: 40px;
+        max-height: 640px;
+    }
+
     &__item {
         position: relative;
         padding: 20px 0;

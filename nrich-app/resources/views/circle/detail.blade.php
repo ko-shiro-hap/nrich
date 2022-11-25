@@ -1,5 +1,12 @@
 @extends('layouts.main')
 
+<script>
+    // チャートに渡すための変数
+    const seriousness = {{ $circle->seriousness }};
+    const relationship = {{ $circle->relationship }};
+    const experience = {{ $circle->experience }};
+    const freedom = {{ $circle->freedom }};
+</script>
 
 @section('header-nav')
     <nav class="header__nav">
@@ -96,7 +103,8 @@
             <h2 class="section-title">ATMOSPHERE</h2>
             <p>どんな雰囲気？</p>
         </div>
-        <div class="atmospheres__item">
+        <canvas id="atmospheres-chart" class="atmospheres__chart"></canvas>
+        {{-- <div class="atmospheres__item">
             <h4>真剣さ</h4>
             <div class="atmospheres__parameter">
                 <p>ゆるめ</p>
@@ -143,7 +151,7 @@
                 <span></span>
                 <p>低い</p>
             </div>
-        </div>
+        </div> --}}
     </section>
 
     {{-- 入会方法開始 --}}

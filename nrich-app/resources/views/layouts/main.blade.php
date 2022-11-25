@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/6c20dffe37.js" crossorigin="anonymous"></script>
     <!-- scss -->
     {{-- <link rel="stylesheet" href="./scss/ style.css" /> --}}
-    @vite(['resources/scss/app.scss', 'resources/js/app.js'])
+    @vite(['resources/scss/app.scss', 'resources/js/app.js', 'resources/js/chart.js'])
 </head>
 
 <body>
