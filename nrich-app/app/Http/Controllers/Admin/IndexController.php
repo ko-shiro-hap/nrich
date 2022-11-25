@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 // 追記
 use App\Models\Administrator;
+use App\Models\Circle;
 
 class IndexController extends Controller
 {
@@ -19,7 +20,10 @@ class IndexController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        $circle_id = Auth::guard('administrators')->user()->circle_id;
+        $circle = Circle::where('id', '=', $circle_id)->first();
+
+        return view('admin.index', ['circle'=>$circle]);
     }
 
     /**
@@ -62,7 +66,10 @@ class IndexController extends Controller
      */
     public function edit($id)
     {
-        //
+        $circle = Circle::where('id', '=', $id)->first();
+        // dd($circle);
+
+        return view('admin.edit', ['circle'=>$circle]);
     }
 
     /**

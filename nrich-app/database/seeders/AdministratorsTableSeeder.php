@@ -22,6 +22,7 @@ class AdministratorsTableSeeder extends Seeder
                 [
                     'user_id' => 'admin0001',
                     'password' => \Hash::make('pass0001'),
+                    'circle_id' => 1,
                 ]
             ]
         );

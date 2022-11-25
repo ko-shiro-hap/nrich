@@ -7,7 +7,7 @@
 
 <body>
     <div class="container">
-        <h1>管理画面トップ</h1>
+        <h1>管理画面</h1>
 
         @if (session('login_msg'))
             <div class="alert alert-success">
@@ -24,6 +24,23 @@
             <li>管理者（Administrator）ログイン状態: {{ Auth::guard('administrators')->check() }}</li>
             {{-- <li>会員（members） ログイン状態: {{ Auth::guard('members')->check() }}</li> --}}
         </ul>
+
+        <table class="table">
+            <tr>
+                <th>サークル名</th>
+                <th>画像</th>
+            </tr>
+            <tr>
+                <td>{{ $circle->name }}</td>
+                <td>
+                    <img src="{{ asset('images/circle/' . $circle->hero_image) }}" alt="メイン画像" width="100"
+                        height="80">
+                </td>
+                <td>
+                    <a href="{{ route('admin.edit', $circle->id) }}">編集する</a>
+                </td>
+            </tr>
+        </table>
 
         <div>
             <a href="/admin/logout">ログアウト</a>
